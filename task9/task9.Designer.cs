@@ -31,35 +31,35 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabRandom = new System.Windows.Forms.TabPage();
-            this.tabFile = new System.Windows.Forms.TabPage();
-            this.grpConstructor = new System.Windows.Forms.GroupBox();
-            this.numCount = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numFrom = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
             this.numTo = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtFile = new System.Windows.Forms.TextBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numFrom = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numCount = new System.Windows.Forms.NumericUpDown();
+            this.tabFile = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.txtFile = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.grpConstructor = new System.Windows.Forms.GroupBox();
             this.lstArray = new System.Windows.Forms.ListBox();
             this.grpList = new System.Windows.Forms.GroupBox();
             this.btnGo = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNegative = new System.Windows.Forms.TextBox();
-            this.txtLast = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtSum = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtLast = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNegative = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tab.SuspendLayout();
             this.tabRandom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFrom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCount)).BeginInit();
             this.tabFile.SuspendLayout();
             this.grpConstructor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numFrom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTo)).BeginInit();
             this.grpList.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -97,29 +97,76 @@
             this.tabRandom.Text = "Випадкові числа";
             this.tabRandom.UseVisualStyleBackColor = true;
             // 
-            // tabFile
+            // numTo
             // 
-            this.tabFile.Controls.Add(this.label4);
-            this.tabFile.Controls.Add(this.btnBrowse);
-            this.tabFile.Controls.Add(this.txtFile);
-            this.tabFile.Controls.Add(this.label6);
-            this.tabFile.Location = new System.Drawing.Point(4, 25);
-            this.tabFile.Name = "tabFile";
-            this.tabFile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFile.Size = new System.Drawing.Size(387, 99);
-            this.tabFile.TabIndex = 1;
-            this.tabFile.Text = "Із файлу";
-            this.tabFile.UseVisualStyleBackColor = true;
+            this.numTo.Location = new System.Drawing.Point(213, 30);
+            this.numTo.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numTo.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.numTo.Name = "numTo";
+            this.numTo.Size = new System.Drawing.Size(64, 20);
+            this.numTo.TabIndex = 5;
+            this.numTo.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
-            // grpConstructor
+            // label3
             // 
-            this.grpConstructor.Controls.Add(this.tab);
-            this.grpConstructor.Location = new System.Drawing.Point(12, 12);
-            this.grpConstructor.Name = "grpConstructor";
-            this.grpConstructor.Size = new System.Drawing.Size(407, 153);
-            this.grpConstructor.TabIndex = 1;
-            this.grpConstructor.TabStop = false;
-            this.grpConstructor.Text = "Варіант заповнення";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(188, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "до";
+            // 
+            // numFrom
+            // 
+            this.numFrom.Location = new System.Drawing.Point(118, 30);
+            this.numFrom.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numFrom.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
+            this.numFrom.Name = "numFrom";
+            this.numFrom.Size = new System.Drawing.Size(64, 20);
+            this.numFrom.TabIndex = 3;
+            this.numFrom.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Діапазон чисел: від";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Кількість елементів масиву:";
             // 
             // numCount
             // 
@@ -138,97 +185,24 @@
             this.numCount.Size = new System.Drawing.Size(59, 20);
             this.numCount.TabIndex = 0;
             this.numCount.Value = new decimal(new int[] {
-            1,
+            10,
             0,
             0,
             0});
             // 
-            // label1
+            // tabFile
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Кількість елементів масиву:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Діапазон чисел: від";
-            // 
-            // numFrom
-            // 
-            this.numFrom.Location = new System.Drawing.Point(118, 30);
-            this.numFrom.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numFrom.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.numFrom.Name = "numFrom";
-            this.numFrom.Size = new System.Drawing.Size(64, 20);
-            this.numFrom.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(188, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "до";
-            // 
-            // numTo
-            // 
-            this.numTo.Location = new System.Drawing.Point(213, 30);
-            this.numTo.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numTo.Minimum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            -2147483648});
-            this.numTo.Name = "numTo";
-            this.numTo.Size = new System.Drawing.Size(64, 20);
-            this.numTo.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Шлях до файлу:";
-            // 
-            // txtFile
-            // 
-            this.txtFile.Location = new System.Drawing.Point(97, 4);
-            this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(249, 20);
-            this.txtFile.TabIndex = 8;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Location = new System.Drawing.Point(352, 2);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(28, 23);
-            this.btnBrowse.TabIndex = 9;
-            this.btnBrowse.Text = "...";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.tabFile.Controls.Add(this.label4);
+            this.tabFile.Controls.Add(this.btnBrowse);
+            this.tabFile.Controls.Add(this.txtFile);
+            this.tabFile.Controls.Add(this.label6);
+            this.tabFile.Location = new System.Drawing.Point(4, 25);
+            this.tabFile.Name = "tabFile";
+            this.tabFile.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFile.Size = new System.Drawing.Size(387, 99);
+            this.tabFile.TabIndex = 1;
+            this.tabFile.Text = "Із файлу";
+            this.tabFile.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -241,6 +215,42 @@
             this.label4.Text = "Файл у форматі TXT має містити один рядок з цілими\r\nчислами (додатні або від\'ємні" +
     ").\r\n\r\nРозділювач чисел - символ крапки \".\"";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(352, 2);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(28, 23);
+            this.btnBrowse.TabIndex = 9;
+            this.btnBrowse.Text = "...";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // txtFile
+            // 
+            this.txtFile.Location = new System.Drawing.Point(97, 4);
+            this.txtFile.Name = "txtFile";
+            this.txtFile.Size = new System.Drawing.Size(249, 20);
+            this.txtFile.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Шлях до файлу:";
+            // 
+            // grpConstructor
+            // 
+            this.grpConstructor.Controls.Add(this.tab);
+            this.grpConstructor.Location = new System.Drawing.Point(12, 12);
+            this.grpConstructor.Name = "grpConstructor";
+            this.grpConstructor.Size = new System.Drawing.Size(407, 153);
+            this.grpConstructor.TabIndex = 1;
+            this.grpConstructor.TabStop = false;
+            this.grpConstructor.Text = "Варіант заповнення";
             // 
             // lstArray
             // 
@@ -285,23 +295,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Аналіз масиву";
             // 
-            // label5
+            // txtSum
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Кількість від\'ємних:";
+            this.txtSum.Enabled = false;
+            this.txtSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtSum.Location = new System.Drawing.Point(269, 83);
+            this.txtSum.Name = "txtSum";
+            this.txtSum.Size = new System.Drawing.Size(100, 20);
+            this.txtSum.TabIndex = 5;
             // 
-            // txtNegative
+            // label8
             // 
-            this.txtNegative.Enabled = false;
-            this.txtNegative.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtNegative.Location = new System.Drawing.Point(269, 30);
-            this.txtNegative.Name = "txtNegative";
-            this.txtNegative.Size = new System.Drawing.Size(100, 20);
-            this.txtNegative.TabIndex = 1;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(36, 86);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(227, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Сума від початку до останнього від\'ємного:";
             // 
             // txtLast
             // 
@@ -321,26 +331,27 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Індекс останнього від\'ємного:";
             // 
-            // txtSum
+            // txtNegative
             // 
-            this.txtSum.Enabled = false;
-            this.txtSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtSum.Location = new System.Drawing.Point(269, 83);
-            this.txtSum.Name = "txtSum";
-            this.txtSum.Size = new System.Drawing.Size(100, 20);
-            this.txtSum.TabIndex = 5;
+            this.txtNegative.Enabled = false;
+            this.txtNegative.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtNegative.Location = new System.Drawing.Point(269, 30);
+            this.txtNegative.Name = "txtNegative";
+            this.txtNegative.Size = new System.Drawing.Size(100, 20);
+            this.txtNegative.TabIndex = 1;
             // 
-            // label8
+            // label5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(36, 86);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(227, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Сума від початку до останнього від\'ємного:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Кількість від\'ємних:";
             // 
             // task9
             // 
+            this.AcceptButton = this.btnGo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 332);
@@ -348,17 +359,20 @@
             this.Controls.Add(this.btnGo);
             this.Controls.Add(this.grpList);
             this.Controls.Add(this.grpConstructor);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(603, 371);
+            this.MinimumSize = new System.Drawing.Size(603, 371);
             this.Name = "task9";
             this.Text = "Простий клас з одновимірним масивом";
             this.tab.ResumeLayout(false);
             this.tabRandom.ResumeLayout(false);
             this.tabRandom.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFrom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCount)).EndInit();
             this.tabFile.ResumeLayout(false);
             this.tabFile.PerformLayout();
             this.grpConstructor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numFrom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTo)).EndInit();
             this.grpList.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

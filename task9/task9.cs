@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.IO;
+using System.Windows.Forms;
 
 namespace task9
 {
@@ -13,19 +14,65 @@ namespace task9
 
         private void btnGo_Click(object sender, System.EventArgs e)
         {
+            //1. Створюємо об'єкт
             if (tab.SelectedTab.Name == "tabRandom")
             {
-                array = new Ar(10);
-            }else if (tab.SelectedTab.Name == "tabFile")
+                //заповнення випадковими числами
+                array = new Ar(
+                    (int)numCount.Value,
+                    (int)numFrom.Value, 
+                    (int)numTo.Value
+                );
+
+            }
+            else if (tab.SelectedTab.Name == "tabFile")
+                //заповнення з файлу
             {
                 if (txtFile.Text == "")
+                    //якщо файл не існує
                     MessageBox.Show("Не обрано текстовий файл!", "Помилка!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    array = new Ar(txtFile.Text);
-            }else
+                    try
+                    {
+                        array = new Ar(txtFile.Text);
+                    }
+                    catch (FileNotFoundException)
+                    {
+                        MessageBox.Show("Файл не знайдено!", "Помилка",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    catch (FileLoadException)
+                    {
+                        MessageBox.Show("Помилка читання файлу!", "Помилка",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+            }
+            else
+                //такого варіанту не може бути, але все можливо)
                 MessageBox.Show("Невідомий варіант заповнення!", "Помилка!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            //2. Виводимо результат
+            array.Print(lstArray);
+
+            //3. Проводимо аналіз
+            txtNegative.Text = array.K.ToString();
+            int lastNegative = array.P();
+            if (lastNegative == -1)
+            {
+                txtLast.Text = "";
+                txtSum.Text = "";
+                MessageBox.Show("Масив не має від'ємних елементів", "Увага",
+                    MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                txtLast.Text = lastNegative.ToString();
+                txtSum.Text = array.Sum(0, lastNegative).ToString();
+            }
         }
 
         private void btnBrowse_Click(object sender, System.EventArgs e)
